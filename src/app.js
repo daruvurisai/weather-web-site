@@ -1,10 +1,10 @@
  const path = require('path') // path is low level node js function api
  const express = require('express') //requireing the express module
-const hbs = require('hbs')
-const geocode = require('./utils/geocode')
-const forecast = require('./utils/forecast')
+ const hbs = require('hbs')
+ const geocode = require('./utils/geocode')
+ const forecast = require('./utils/forecast')
  const app = express()//starting the express framewrok
- 
+ const port = process.env.PORT || 3000// setting heroku port 
  //Define Paths for express config or creating routes for the folder views and templates
  const publicdirect = path.join(__dirname ,'../public')
  const views = path.join(__dirname,'../templates/views')
@@ -76,7 +76,8 @@ app.get('*',(req,res)=>{
         name:'Sai Krishna Daruvuri'
     })
 })
- app.listen(3000,()=>{//Mentioning the port to listen in the nserver
+//setting up port variable 
+ app.listen(port,()=>{//Mentioning the port to listen in the nserver
      console.log('server is up and runnign on port 3000')
  })
 // requiring the direct html pages 
