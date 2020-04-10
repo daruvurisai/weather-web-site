@@ -11,7 +11,7 @@ const forecast = (lat,long ,callback)=>{
               callback('unable to find location',undefined)
          }
          else{
-              callback(undefined,'It is '+body.main.temp+' °Fahrenheit in ' +body.name )
+              callback(undefined,'It is '+body.main.temp+' °Fahrenheit in ' + body.name )
          }
     })
 } 
