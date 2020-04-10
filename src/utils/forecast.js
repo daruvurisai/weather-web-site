@@ -1,4 +1,5 @@
 const request = require('request')
+
 const forecast = (lat,long ,callback)=>{
     const url = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&units=imperial&appid=15227e973ed70138411f821f615e4478'
 
@@ -10,7 +11,7 @@ const forecast = (lat,long ,callback)=>{
               callback('unable to find location',undefined)
          }
          else{
-              callback(undefined,body.main.temp)
+              callback(undefined,'It is '+body.main.temp+' °Fahrenheit in ' +body.name )
          }
     })
 } 
