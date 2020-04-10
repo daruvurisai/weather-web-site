@@ -53,6 +53,7 @@
                 return res.send({error})
             }
             res.send({
+                success : true,
                 forecast:forecastData,
                 location,
                 address:req.query.address
