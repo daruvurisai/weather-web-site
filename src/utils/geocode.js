@@ -7,7 +7,7 @@ const geocode = (address,callback)=>{
               callback('Unable to connect to the location servoces',undefined)
          }
          else if (body.features.length===0){
-              callback('Location Entered Incorrect, Please enter Correct location',undefined)
+              callback('Location Entered Incorrect,Please enter Correct location',undefined)
          }
          else{
               callback(undefined,{
